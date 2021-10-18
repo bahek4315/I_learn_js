@@ -1,4 +1,3 @@
-'use strict';
 
 //task for if + prompt
 // let taskQuestion = prompt('Какое "официальное" название JavaScript?', '');
@@ -309,34 +308,157 @@
 // }
 //
 
-let vasya = { name: "Вася", age: 25 };
-let petya = { name: "Петя", age: 30 };
-let masha = { name: "Маша", age: 28 };
-let arr = [ vasya, petya, masha ];
-
-let getAverageAge = (users) => {
-  return Math.round(users.reduce((sum, current) => sum + current.age, 0) / users.length);
-}
-console.log(getAverageAge(arr));
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
+// let arr = [ vasya, petya, masha ];
+//
+// let getAverageAge = (users) => {
+//   return Math.round(users.reduce((sum, current) => sum + current.age, 0) / users.length);
+// }
+// console.log(getAverageAge(arr));
 
 // console.log(names);
+
+// let obj = {
+//   name: "John",
+//   age: 30
+// };
 //
+// let map = new Map(Object.entries(obj));
 //
+// console.log(map);
+//
+// let map1 = new Map([
+//   ['1',  'str1'],
+//   [1,    'num1'],
+//   [true, 'bool1']
+// ]);
+//
+// console.log(map1);
+//
+// let map2 = new Map;
+// map2.set("1", "str1")
+//   .set(1, "num1")
+//   .set(true, "bool1");
+// console.log(map2);
+
+
+// function unique(arr) {
+//   let set = new Set(arr);
+//   return Array.from(set);
+// }
+//
+// let values = ["Hare", "Krishna", "Hare", "Krishna",
+//   "Krishna", "Krishna", "Hare", "Hare", ":-O"
+// ];
+//
+// alert( unique(values) ); // Hare,Krishna,:-O
+
+
+// let prices = {
+//   banana: 1,
+//   orange: 2,
+//   meat: 4,
+// };
+//
+// let doublePrices = Object.fromEntries(
+//   // преобразовать в массив, затем map, затем fromEntries обратно объект
+//   Object.entries(prices).map(([key, value]) => [key, value * 2])
+// );
+//
+// console.log(doublePrices);
+
+// let salaries = {
+//   "John": 0,
+//   "Pete": 0,
+//   "Mary": 0
+// };
+//
+// let sumSalaries = (obj) => {
+//   let total = 0;
+//   for (let i = 0; i < Object.values(obj).length; i++) {
+//     total +=Object.values(obj)[i]
+//   }
+//   return total;
+// }
+//
+// console.log(sumSalaries(salaries));
+
+
+// let salaries = {
+//   "John": 100,
+//   "Pete": 300,
+//   "Mary": 250
+// };
+// let topSalaries = (obj) => {
+//   let max = 0;
+//   let maxName = '';
+//   for (let [name, num] of Object.entries(obj)) {
+//     if (num > max) {
+//       max = num;
+//       maxName = name;
+//     }
+//   }
+//   return maxName;
+// }
+// console.log(topSalaries(salaries));
+
+// let date = new Date(2012, 01, 20, 03, 12);
+// console.log(date);
+//
+// let getWeekDay = (d) => {
+//   if (d.getDay() == 0) return 'ВС';
+//   if (d.getDay() == 1) return 'ПН';
+//   if (d.getDay() == 2) return 'ВТ';
+//   if (d.getDay() == 3) return 'СР';
+//   if (d.getDay() == 4) return 'ЧТ';
+//   if (d.getDay() == 5) return 'ПТ';
+//   if (d.getDay() == 6) return 'СБ';
+// }
+//
+// console.log(getWeekDay(date));
+// //OR
+// function getWeekDay1(date) {
+//   let days = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+//   return days[date.getDay()];
+// }
+
+// function getDateAgo(date, days) {
+//   let dateCopy = new Date(date);
+//   dateCopy.setDate(date.getDate() - days);
+//   return dateCopy.getDate();
+// }
+// let date = new Date(2015, 0, 2);
+//
+// alert( getDateAgo(date, 1) ); // 1, (1 Jan 2015)
+// alert( getDateAgo(date, 2) ); // 31, (31 Dec 2014)
+// alert( getDateAgo(date, 365) ); // 2, (2 Jan 2014)
+
 // let array = ['Я', 'не', 'люблю', 'JS', 'sdhfb'];
 // let array2 = ['Петя', 'Ира', 'молодцы'];
 // let arrayNum = [2,4,76,8,3,2,6,8];
 // let divideByTwo = (arr) => {
 //   return arr.slice(0, (Math.ceil((arr.length) / 2)))
 // }
-//
+
 // let sumArrays = (arr1, arr2) => {
 //   return arr1.concat(arr2);
 // }
-//
+
 // let even = (arr) => {
-//   return arr.filter((number) => number % 2 === 0)
+//   return arr.filter((number) => number % 3 === 0)
 // }
-//
+
 // console.log(even(arrayNum));
-//
+
 // let string = 'Назвыемсвк напр капан.pdf';
+
+// const obj = {
+//   name: 'Horo',
+//   foo() {
+//     console.log(this.name);
+//   },
+//   bar: () => console.log(this.name)
+// }
+// let print = obj.foo;

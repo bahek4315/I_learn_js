@@ -18,3 +18,24 @@
   margin: 0;
   padding: 0;
 }
+
+.red-block {
+  padding: 0;
+  height: 100px;
+  width: 150px;
+  margin: 0 auto;
+  background-color: red;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.red-block span {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.margin-test {
+  margin-top: 300px;
+}
