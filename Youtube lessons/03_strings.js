@@ -35,14 +35,14 @@ const age = 26;
 // console.log(newString.trimLeft()); //ток слева
 // console.log(newString.trimRight()); //ток справа
 
-function logPerson (s, name, age) {
-    console.log(s, name, age)
-    return `${s[0]}${name}${s[1]}${age}${s[2]}`;
-}
+// function logPerson (s, name, age) {
+//     console.log(s, name, age)
+//     return `${s[0]}${name}${s[1]}${age}${s[2]}`;
+// }
 
-const personName = 'Иван';
-const personAge = 26;
+// const personName = 'Иван';
+// const personAge = 26;
 
-const output = logPerson`Имя: ${personName}, Возраст ${personAge}!`;
+// const output = logPerson`Имя: ${personName}, Возраст ${personAge}!`;
 
-console.log(output);
+// console.log(output);
