@@ -1,11 +1,11 @@
-const cars = ['Mazda', 'Ford', 'BMW', 'Mercedes']; // элементы могут быть любые, хоть цифра+строки
-const people = [
-    {name: 'Ivan', budget: 3200},
-    {name: 'Vladilen', budget: 5200},
-    {name: 'Igor', budget: 200},
-];
+// const cars = ['Mazda', 'Ford', 'BMW', 'Mercedes']; // элементы могут быть любые, хоть цифра+строки
+// const people = [
+//     {name: 'Ivan', budget: 3200},
+//     {name: 'Vladilen', budget: 5200},
+//     {name: 'Igor', budget: 200},
+// ];
 
-const fib = [1, 1, 2, 3, 5, 8, 13]
+// const fib = [1, 1, 2, 3, 5, 8, 13]
 
 // это методы, если делаем сами функцию, то это ф-я, а не метод
 
@@ -101,4 +101,6 @@ const fib = [1, 1, 2, 3, 5, 8, 13]
 //         return acc;
 //     }, 0)
 // console.log(sumAllBudget2);
+
+//есть еще forEach, но он возвращает не массив, а undefined, он аналог циклу 
 

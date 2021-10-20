@@ -1,5 +1,5 @@
-let name = 'Иван';
-const age = 26;
+// let name = 'Иван';
+// const age = 26;
 
 // function getAge() {
 //     return age;

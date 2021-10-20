@@ -74,3 +74,5 @@
 // const logWithLastName = createMember('Ivan');
 // console.log(logWithLastName('Dmitriev')); // будет IvanDmitriev
 
+
+
