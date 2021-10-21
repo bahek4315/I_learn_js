@@ -79,11 +79,97 @@ const logger = {
         console.log('Object keys: ', Object.keys(obj))
     }
 }
-logger.keys(person)
+// logger.keys(person)
 
 const logger1 = {
     keys() {
-        console.log('Object keys: ', Object.keys(this))
+        console.log('Object keys: ', Object.keys(this)) //this=logger
+    },
+
+    keysAndValues() {
+        key1: 'value1'
     }
 }
-logger1.keys(person)
+//bind привязывает контекст, возвразает ф-ю
+// const bound = logger1.keys.bind(person);
+// bound();
+
+//call как bind, ток ее вызывает
+
+// logger1.keys.call(person);
+
+// третий метод:
+
+// const logger2 = {
+//     keys() {
+//         console.log('Object keys: ', Object.keys(this)) //this=logger
+//     },
+
+//     keysAndValues() {
+//         Object.keys(this).forEach(key => {
+//             console.log(`"${key}": ${this[key]}`)
+//         })
+//     }
+// }
+
+// logger2.keysAndValues.call(person);
+
+//Как передать параметры?
+
+const logger3 = {
+    keys() {
+        console.log('Object keys: ', Object.keys(this)) //this=logger
+    },
+
+    keysAndValues() {
+        Object.keys(this).forEach(key => {
+            console.log(`"${key}": ${this[key]}`)
+        })
+    },
+
+    withParams(top = false, between = false, bottom = false) {
+        if (top) {
+            console.log('------Start------')
+        }
+        Object.keys(this).forEach(key => {
+            console.log(`"${key}": ${this[key]}`)
+            if (between) {
+                console.log('-----------------')
+            }
+        })
+
+        if (bottom) {
+            console.log('------Finish------')
+        }
+    }
+}
+//А вот как: после передачи об-та, идет передача значения функции, тут первое - top
+// logger3.withParams.call(person, true, true, true);
+
+// чтобы исключить последнюю линию от between, которая будет после послед
+// ключа и перед finish, используем forEach параметр index
+
+const logger4 = {
+    withParams(top = false, between = false, bottom = false) {
+        if (top) {
+            console.log('------Start------')
+        }
+        Object.keys(this).forEach((key, index, array) => {
+            console.log(`"${key}": ${this[key]}`);
+
+            if (between && index !== (array.length - 1)) {
+                console.log('-----------------')
+            };
+        })
+
+        if (bottom) {
+            console.log('------Finish------')
+        }
+    }
+}
+
+// logger4.withParams.call(person, true, true, true);
+
+// //apply = call, только принимает только два параметра, вторым может быть массив параметров для ф-ции
+
+// logger4.withParams.apply(person, [true, true, true]);
